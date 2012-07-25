@@ -8,6 +8,6 @@ describe Day do
   end
 
   it "should have a title" do
-    day.title.should_not raise_error
+    day.title.should_not be_empty
   end
 end
