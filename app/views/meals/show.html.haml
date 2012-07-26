@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Type:
+  = @meal.type
+%p
+  %b Status:
+  = @meal.status
+%p
+  %b Optional:
+  = @meal.optional
+%p
+  %b Order:
+  = @meal.order
+
+= link_to 'Edit', edit_meal_path(@meal)
+\|
+= link_to 'Back', meals_path

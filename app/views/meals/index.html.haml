@@ -1,0 +1,25 @@
+%h1 Listing meals
+
+%table
+  %tr
+    %th Type
+    %th Status
+    %th Optional
+    %th Order
+    %th
+    %th
+    %th
+
+  - @meals.each do |meal|
+    %tr
+      %td= meal.type
+      %td= meal.status
+      %td= meal.optional
+      %td= meal.order
+      %td= link_to 'Show', meal
+      %td= link_to 'Edit', edit_meal_path(meal)
+      %td= link_to 'Destroy', meal, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Meal', new_meal_path

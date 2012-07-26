@@ -1,4 +1,8 @@
 Mydiet::Application.routes.draw do
+  resources :foods
+
+  resources :meals
+
   root :to => 'days#index'
 
   resources :days
