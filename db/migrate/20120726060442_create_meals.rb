@@ -3,7 +3,7 @@ class CreateMeals < ActiveRecord::Migration
     create_table :meals do |t|
       t.string :type
       t.string :status
-      t.boolean :optional
+      t.boolean :optional, :default => false
       t.integer :order
 
       t.timestamps
