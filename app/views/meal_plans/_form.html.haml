@@ -1,0 +1,13 @@
+= form_for @meal_plan do |f|
+  -if @meal_plan.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@meal_plan.errors.count, "error")} prohibited this meal_plan from being saved:"
+      %ul
+        - @meal_plan.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :active
+    = f.check_box :active
+  .actions
+    = f.submit 'Save'

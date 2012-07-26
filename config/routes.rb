@@ -1,4 +1,6 @@
 Mydiet::Application.routes.draw do
+  resources :meal_plans
+
   resources :foods
 
   resources :meals

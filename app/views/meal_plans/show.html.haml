@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Active:
+  = @meal_plan.active
+
+= link_to 'Edit', edit_meal_plan_path(@meal_plan)
+\|
+= link_to 'Back', meal_plans_path
