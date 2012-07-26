@@ -1,4 +1,6 @@
 Mydiet::Application.routes.draw do
+  root :to => 'days#index'
+
   resources :days
 
   devise_for :users
