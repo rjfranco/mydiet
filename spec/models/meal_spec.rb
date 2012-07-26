@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Meal do
-  pending "add some examples to (or delete) #{__FILE__}"
+  # meal = FactoryGirl.build :meal
+  
+  # it "should have a valid factory" do
+  #   meal.should be_valid
+  # end
 end
