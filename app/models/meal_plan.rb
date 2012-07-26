@@ -3,7 +3,12 @@ class MealPlan < ActiveRecord::Base
   has_many :meals
   before_save :check_for_active_plan
 
+  # Creating a way to easily get the active plan
+  def self.active
+    first :conditions => {:active => true}
+  end
 
+  private
   def check_for_active_plan
     if MealPlan.active.nil?
       if self.active == false
@@ -17,11 +22,6 @@ class MealPlan < ActiveRecord::Base
         oldplan.save
       end
     end
-  end
-
-  # Creating a way to easily get the active plan
-  def self.active
-    first :conditions => {:active => true}
   end
 
 end
