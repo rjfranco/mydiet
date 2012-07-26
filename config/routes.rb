@@ -1,15 +1,17 @@
 Mydiet::Application.routes.draw do
+  root :to => 'days#index'
+
   resources :meal_plans
 
   resources :foods
 
   resources :meals
 
-  root :to => 'days#index'
-
   resources :days
 
   devise_for :users
+
+  match 'admin' => 'admin#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

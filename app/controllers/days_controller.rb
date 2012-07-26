@@ -4,9 +4,13 @@ class DaysController < ApplicationController
   def index
     @days = Day.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @days }
+    if @days.empty?
+      redirect_to admin_path
+    else
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @days }
+      end
     end
   end
 
