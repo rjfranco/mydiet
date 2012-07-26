@@ -5,6 +5,6 @@ describe MealPlan do
   currentplan = FactoryGirl.build :meal_plan
 
   it "should disable previously active plans" do
-    MealPlan.active.should be currentplan
+    MealPlan.current.should eq currentplan
   end
 end
