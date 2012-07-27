@@ -6,4 +6,10 @@
     =# javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
+    %section#container
+      %header
+        %h1 My Diet
+        - unless content_for(:header).empty?
+          = yield :header
+      %section#content= yield
+      %footer
