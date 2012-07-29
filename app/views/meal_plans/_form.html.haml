@@ -9,12 +9,15 @@
   - unless @active_plan
     = f.hidden_field :active, :value => true
 
+  - f.fields_for :meals do |meal|
+    = render 'partials/meal_fields', :f => meal
+  = link_to_add_association 'Add Meals', f, :meals
+
   %ul
     - if @active_plan
       %li
         = f.check_box :active
         = f.label 'Make this the active Meal Plan'
-
 
   .actions
     = f.submit 'Save', :class => 'btn'
