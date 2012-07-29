@@ -26,8 +26,13 @@ header {
 
 #content {
   padding: 0 40px;
+  h2 {
+    line-height: 1.3;
+    font-size: 2em;
+  }
   p {
     margin: 1em 0;
+    line-height: 1.3;
   }
   ul, ol {
     margin: 1.5em 1em;
@@ -66,7 +71,6 @@ header {
 
 #signup {
   h2 {
-    line-height: 1.3;
     font-size: 3em;
     width: 400px;
     float: left;
@@ -89,6 +93,14 @@ header {
         }
       }
     }
+  }
+}
+
+#admin_mealplan {
+  a.btn {
+    float: right;
+    font-size: 1.6em;
+    margin: .8em 0 0 3em;
   }
 }
 

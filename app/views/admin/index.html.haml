@@ -1,0 +1,7 @@
+#admin_mealplan
+  - if @mealplan
+    There's a meal plan!
+  - else
+    %h2 Now we need to setup a Meal Plan.
+    = link_to 'Let\'s get Started', new_meal_plan_path, :class => 'btn'
+    %p Generally, you'll want to put the option for each meal type you use the most first. This way it'll appear as the default for that meal type. Say, like if you have multiple breakfast options, make sure the one you eat the most ( or should eat the most ) is first.

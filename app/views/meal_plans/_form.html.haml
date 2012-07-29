@@ -6,8 +6,15 @@
         - @meal_plan.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :active
-    = f.check_box :active
+  - unless @active_plan
+    = f.hidden_field :active, :value => true
+
+  %ul
+    - if @active_plan
+      %li
+        = f.check_box :active
+        = f.label 'Make this the active Meal Plan'
+
+
   .actions
-    = f.submit 'Save'
+    = f.submit 'Save', :class => 'btn'

@@ -4,6 +4,7 @@ class MealPlansController < ApplicationController
   def index
     @meal_plans = MealPlan.all
 
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @meal_plans }
@@ -25,6 +26,7 @@ class MealPlansController < ApplicationController
   # GET /meal_plans/new.json
   def new
     @meal_plan = MealPlan.new
+    @active_plan = MealPlan.active
 
     respond_to do |format|
       format.html # new.html.erb

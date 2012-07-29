@@ -3,6 +3,7 @@ class AdminController < ApplicationController
   before_filter :authenticate_user!, :except => [:welcome]
   
   def index
+    @mealplan = MealPlan.active
   end
 
   def welcome

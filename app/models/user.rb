@@ -13,8 +13,9 @@ class User < ActiveRecord::Base
 
   private
   def prevent_unless_first
-    unless User.all.empty?
-      flash[:alert] = 'Sorry, only one user per installation instance right now.'
+    unless User.all.length < 2
+      puts "There's already a thing here."
+      flash[:error] = 'Sorry, only one user per installation instance right now.'
       return false
     end
   end
